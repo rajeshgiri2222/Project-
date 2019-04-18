@@ -1,0 +1,51 @@
+<html>
+<head> <title> Input Type </title> 
+
+<style>
+	#show{
+		width:50px;
+		padding:5px;
+		text-align:center;
+		border:1px solid #b1b1b1;
+		margin-top:30px;
+	
+	}
+</style>
+</head>
+<body>
+	<input type="password" id="pass" />
+	<h3 id="result"> </h3>
+	<h3 id="result2"> </h3>
+<div id="show" onclick="myFunction()"> Show </div>
+<script>
+var notMatch = 0;
+var timeleft = 10;
+function myFunction(){
+	var val = document.getElementById("pass").value;
+	var fixedPW = val.match(/12345/g);
+	//document.getElementById("result").innerHTML = fixedPW; 
+	if (val == fixedPW){
+		document.getElementById("result").innerHTML = "password match";
+	}
+	else{
+		document.getElementById("result").innerHTML = "password  Not Match"; 
+		notMatch++;
+	
+	if(notMatch % 3 == 0){
+		var timeCount = setInterval(function(){ 
+		 document.getElementById("result2").innerHTML = --timeleft;
+		 document.getElementById('pass').disabled = true;
+		 //alert(timeleft);
+		 if(timeleft == 0){
+			clearInterval(timeCount);
+			document.getElementById('pass').disabled = false;
+			//document.getElementById("result").innerHTML = " ";
+			}
+		 }, 1000);
+		 timeleft = 10;
+	}
+	 }
+}
+</script>
+
+</body>

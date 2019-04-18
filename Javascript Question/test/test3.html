@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Question 3</title>
+</head>
+<body>
+<img src="img1.jpg" width="150">
+<img src="img2.jpg" width="150">
+<img src="img3.jpg" width="150">
+<img src="img4.jpg" width="150">
+<img src="img5.jpg" width="150"> 
+<img src="img6.jpg" width="150"> 
+<img src="img7.jpg" width="150">  
+<button onclick="myFunction()"> Change Img </button>
+<h1 id="test"></h1>
+<script>
+function myFunction(){
+var imgName = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg"];
+imgName.push("img5.jpg", "img6.jpg", "img7.jpg")
+var len = imgName.length; 
+var arrayLen = len - 1;
+for(var i = arrayLen; i >= 0; i--){
+	document.getElementsByTagName("img")[i].setAttribute("id", "img" + i);
+	document.getElementById("img" + i).src = imgName[arrayLen - i];
+ }
+}
+</script>
+</body>
+</html>

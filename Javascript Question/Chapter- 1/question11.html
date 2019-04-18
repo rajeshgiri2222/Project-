@@ -1,0 +1,33 @@
+<script>
+var a = 12990;      //23001
+var x;
+var b = a % 10 + 1;
+b = myf(b);
+var c = Math.floor(a / 10);
+// c = 1299
+var d = c % 10 +1;
+d = myf (d);
+var e = Math.floor(c / 10);
+// e = 123
+var f = e % 10 +1;
+f = myf (f);
+var g = Math.floor(e / 10);
+// g = 12
+var h = g % 10 +1;
+h = myf (h);
+var i = Math.floor( g / 10) +1;
+i = myf (i);
+
+
+
+document.write(i +""+ h +""+ f +""+ d +""+ b );
+//document.write(1)
+
+function  myf(x){
+
+if(x/10 == 1){
+	x = 0;
+	}
+	return x;
+};
+</script>

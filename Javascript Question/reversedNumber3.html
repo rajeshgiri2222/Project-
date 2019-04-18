@@ -1,0 +1,26 @@
+<html>
+	<head> <title> Reversed </title> </head>
+	<body>
+		<input type="number" id="num">
+		<br>
+		<button onclick="myFunction()"> Reversed </button>
+			<h1 id="test"> </h1>
+		
+		<script>
+		function myFunction(){
+			var getNumber = document.getElementById("num").value;
+			//document.getElementById("test").innerHTML = getNumber;
+			for(i = getNumber; getNumber > 0;){
+				var rem = getNumber % 10;
+				var quotient = Math.floor(getNumber / 10);
+				getNumber = quotient;
+				//document.write(rem);
+				document.getElementById("test").innerHTML += rem;
+				
+			}
+		}
+		
+		</script>
+
+	</body>
+</html>

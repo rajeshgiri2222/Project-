@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+
+
+<script>
+
+var timeleft = 10;
+ var timeCount = setInterval(function(){
+  document.getElementById("demo").innerHTML = --timeleft;
+  if(timeleft == 0)
+    clearInterval(timeCount);
+},1000);
+
+</script>
+
+</body>
+</html>

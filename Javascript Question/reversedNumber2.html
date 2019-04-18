@@ -1,0 +1,27 @@
+<html>
+	<head><title> Reversed 2 </title></head>
+	<body>
+	
+		<input type="number" id="getNumbar" maxlength="5"/> <br/>
+		<button onclick="myFunction()">Reversed</button>
+		<h1 id="test">  </h1>
+		<h1 id="test2">  </h1>
+		<script>
+		function myFunction(){
+		var newNumber = "";
+		var getNumber = parseInt(document.getElementById("getNumbar").value);
+			for(var i = getNumber; getNumber > 0;){
+			var remainder = getNumber % 10;
+			var getNumber = Math.floor(getNumber / 10);
+			newNumber += remainder;
+			}
+			document.getElementById("test2").innerHTML = newNumber;
+		}
+		
+		</script>
+		
+		
+	
+	
+	</body>
+<html>

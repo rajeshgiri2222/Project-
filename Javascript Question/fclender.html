@@ -1,0 +1,134 @@
+<html>
+<head>
+<title> Date </title>
+</head>
+<body>
+<!-- <input type ="number" placeholder="Start year" id="start" value=""> -->
+<input type="number" placeholder="Last year" id="getyear" value="">
+
+<h1 id="test">  </h1>
+<button onclick="myFunction()">Get Day</button>
+
+
+<script>
+//debugger
+var startyear = 2000;
+function myFunction(){
+ 
+
+ var myyear = document.getElementById("getyear").value;
+
+//var getleapyear = Math.floor(yearDiff / 4);
+/*var leapYearCount = 0;
+for (var i = startyear; i <= myyear - 1; i++){
+	<!-- document.getElementById("test").innerHTML = leapYear(i); -->
+
+var x = i % 4 == 0 && i % 100 != 0; 
+ var y = i % 100 == 0 && i % 400 == 0;  
+ if(x || y){ 
+ leapYearCount++; 
+ }
+
+}
+
+
+var yearDiff = myyear - startyear;
+var notleapyear = yearDiff - leapYearCount; 
+var leapYear1 = leapYearCount * 2;
+//var totalDays = yearDiff * 365 ;
+var totalDaysWithLeap = yearDiff + leapYear1
+
+*/
+
+
+/*if (totalDaysWithLeap % 7 == 0){
+	document.getElementById("test").innerHTML = "Monday";
+}
+
+else if(totalDaysWithLeap % 7 == 1){
+	document.getElementById("test").innerHTML = "Tuesday";
+}
+else if(totalDaysWithLeap % 7 == 2){
+	document.getElementById("test").innerHTML = "Wednesday";
+}	
+
+else if(totalDaysWithLeap % 7 == 3){
+	document.getElementById("test").innerHTML = "Thursday";
+}
+
+else if(totalDaysWithLeap % 7 == 4){
+	document.getElementById("test").innerHTML = "Friday";
+}
+
+else if(totalDaysWithLeap % 7 == 5){
+	document.getElementById("test").innerHTML = "Saturday";
+}
+
+else if(totalDaysWithLeap % 7 == 6){
+	document.getElementById("test").innerHTML = "Sunday";
+}
+
+else{
+document.getElementById("test").innerHTML = "have a nice day";
+}
+	
+}*/
+
+var leapYearCount = 0;
+for (var i = startyear; i >= myyear; i--){
+	//document.getElementById("test").innerHTML = i;
+
+	var x = i % 4 == 0 && i % 100 != 0; 
+	var y = i % 100 == 0 && i % 400 == 0;  
+	if(x || y){ 
+	leapYearCount++; 
+	}
+ 
+}
+var yearDiff = startyear - myyear;
+var notleapyear = yearDiff - leapYearCount; 
+var leapYears = leapYearCount * 2;
+//var totalDays = yearDiff * 365 ;
+var totalDaysWithLeap = yearDiff + leapYears;
+
+
+/*if (totalDaysWithLeap % 7 == 0){
+	document.getElementById("test").innerHTML = "Saturday"; 
+}
+
+else if(totalDaysWithLeap % 7 == 1){
+	document.getElementById("test").innerHTML = "Sunday"; 
+}
+else if(totalDaysWithLeap % 7 == 2){
+	document.getElementById("test").innerHTML = "Monday"; 
+}	
+
+else if(totalDaysWithLeap % 7 == 3){
+	document.getElementById("test").innerHTML = "Tuesday"; 
+}
+
+else if(totalDaysWithLeap % 7 == 4){
+	document.getElementById("test").innerHTML = "Wednesday"; 
+}
+
+else if(totalDaysWithLeap % 7 == 5){
+	document.getElementById("test").innerHTML = "Thursday"; 
+}
+
+else if(totalDaysWithLeap % 7 == 6){
+	document.getElementById("test").innerHTML = "Friday"; 
+}
+
+else{
+document.getElementById("test").innerHTML = "have a nice day";
+}/
+	
+}
+
+
+</script>
+
+
+
+</body>
+</html>

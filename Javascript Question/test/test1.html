@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Java Projest</title>
+		
+		<style>
+		.main{
+			width:1000px;
+			height:auto;
+			margin: 0 auto;
+			padding:50px;
+		}
+		
+		.imgdiv{
+			width:400px;
+			margin:50px;
+			float:left;
+		}
+		</style>
+		
+		
+	</head>
+	<body>
+	<div class="main">
+		<img id="img1" class="imgdiv" src="img1.jpg">
+		<img id="img2" class="imgdiv" src="img2.jpg">
+		<button onclick="myFunction()">Change Images </div>
+	</div>
+	<script>
+	/*function myFunction(){
+		document.getElementById("img1").src = "img2.jpg";
+		document.getElementById("img2").src = "img1.jpg";
+	}*/
+	
+	var imgName = [" ", "img2.jpg", "img1.jpg"];
+	/*function myFunction(){
+		document.getElementById("img1").src = imgName[1];
+		document.getElementById("img2").src = imgName[0];
+	}*/
+	
+	var imgName = ["img1.jpg", "img2.jpg"];
+	
+	function myFunction(){
+	//var = idName("img" + i);
+	var len = imgName.length;
+		for(var i = 2; i > len; i--){
+			//document.getElementById("img" + (i+1)).src = img[len-(i+1)] + ".jpg";
+			//document.getElementsByTagName("img")[0].setAttribute("id", "img" + i);
+			//document.getElementsByTagName("img")[0].setAttribute("src", "img" + i ".jpg");
+			document.getElementsByTagName("img")[i-1].setAttribute("id", "img" + i-1);
+			document.getElementsByTagName("img")[i-1].setAttribute("src", "img" + i + ".jpg");
+		}
+	}
+	
+
+	
+	
+	</script>
+	</body>
+</html>

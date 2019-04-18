@@ -1,0 +1,73 @@
+<html>
+<head>
+<title> Date </title>
+</head>
+<body>
+<!-- <input type ="number" placeholder="Start year" id="start" value=""> -->
+<input type="number" placeholder="Last year" id="getyear" value="">
+
+<h1 id="test">  </h1>
+<button onclick="myFunction()">Get Day</button>
+
+
+<script>
+var startyear = 2000;
+function myFunction(){
+var myYear = document.getElementById("getyear").value;
+var yearDiff = startyear - myYear;
+var leapYearCount = 0;
+for (var i = startyear; i >= myYear; i--){
+//document.getElementById("test").innerHTML = i + "<br>";
+var x = i % 4 == 0 && i % 100 != 0; 
+ var y = i % 100 == 0 && i % 400 == 0;  
+ if(x || y){ 
+ leapYearCount++; 
+ }
+//document.getElementById("test").innerHTML = i;
+}
+var notLeapYear = yearDiff - leapYearCount; 
+var totalLeapYearInDays = leapYearCount * 2;
+var totalDays = totalLeapYearInDays + notLeapYear;
+//var test = totalDays % 7;
+//document.getElementById("test").innerHTML = test;
+if(totalDays % 7 == 0){
+document.getElementById("test").innerHTML = "Sunday"; 
+}
+
+else if(totalDays % 7 == 1){
+document.getElementById("test").innerHTML = "SaturDay"; 
+}
+
+else if(totalDays % 7 == 2){
+document.getElementById("test").innerHTML = "Friday"; 
+}
+
+else if(totalDays % 7 == 3){
+document.getElementById("test").innerHTML = "ThursDay";
+}
+
+else if(totalDays % 7 == 4){
+document.getElementById("test").innerHTML = "Wednesday"; 
+}
+else if(totalDays % 7 == 5){
+document.getElementById("test").innerHTML = "Tuesday"; 
+}
+else if(totalDays % 7 == 6){
+document.getElementById("test").innerHTML = "Monday"; 
+}
+
+else{
+	document.getElementById("test").innerHTML = "Have a nice Day";
+}
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>

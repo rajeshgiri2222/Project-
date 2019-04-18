@@ -1,0 +1,56 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<script>
+
+ function myFunction() { 
+    var costprice = parseInt(document.getElementById("cp").value);
+	 var sellingPrice = parseInt(document.getElementById("sp").value);  
+
+				if(costprice < sellingPrice){
+					var profit = sellingPrice - costprice;
+					document.getElementById("abc").innerHTML = profit;
+					}
+					else if(sellingPrice < costprice){
+						var loss = costprice - sellingPrice ;
+						document.getElementById("abc").innerHTML ="profi" loss;
+					}
+					else{
+				
+						//var nopl = "No profit no loss";
+						document.getElementById("abc").innerHTML = "No profit no loss";
+					}
+}
+
+</script>
+<table> 
+<form>
+<tr>
+<td>Cost price</td>
+<td><input type="number" id="cp" value=""></td>
+</tr>
+
+<tr>
+<td>Selling price</td>
+<td><input type="number" id="sp" value=""></td>
+</tr>
+
+
+
+</form>
+<table>
+
+<p id="costprice">dfsd </p>
+<p id="sellingPrice">dsfd</p>
+
+<h1 id="abc"> </h1>
+
+
+
+
+<button onclick="myFunction()">Try it</button>
+</body>
+</head>
+</html>

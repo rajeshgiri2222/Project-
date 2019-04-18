@@ -1,0 +1,22 @@
+<html>
+	<head> <title> Test</title> </head>	
+	<body>
+	<input type="text" id="name">
+	<input type="text" id="lastName">
+	<input type="text" id="email">
+	<button type="submit" onclick="myFunction()">Submit </button>
+	<h1 id="inputName"> </h1>
+	<h1 id="inputLastName"> </h1>
+	<h1 id="inputEmail"> </h1>
+	<script>
+		function myFunction(){
+		var name = document.getElementById("name").value;
+		var lastName = document.getElementById("lastName").value;
+		var email = document.getElementById("email").value;
+		document.getElementById("inputName").innerHTML = name;
+		document.getElementById("inputLastName").innerHTML = lastName;
+		document.getElementById("inputEmail").innerHTML = email;
+	}
+	</script>
+	</body>
+</html>

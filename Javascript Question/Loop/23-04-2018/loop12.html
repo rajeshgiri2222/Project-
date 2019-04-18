@@ -1,0 +1,38 @@
+<html>
+<head><title> Loop 11 (4 x 4) </title></head>
+<body>
+<h3 id="demo"> </h3>
+
+
+<script>
+
+	var a, b, i, j, k; 
+	
+		for(a = 0; a < 4; a++){
+			for(b = 0; b <= a; b++){
+				document.write("*");
+			}
+			if (a < 3){
+			document.write("</br>");
+			}
+		}
+		
+		for(i = 4; i > 0 ; i--){
+		
+		if (i < 4){
+		for(k = 8; k > i; k--){
+			document.write("&nbsp;&nbsp;")
+		}
+		}
+		
+			for(j = 0; j < i; j++){
+				document.write("*");
+			}
+				document.write("</br>");
+		}
+		
+		
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+	<head><title> Hide img tag </title></head>
+<body>
+<div class="abc">
+	
+	<img id="myImg" src="test2.zip"> 
+	<button onclick="myFunction()"> Test </button>
+	
+</div>
+</body>
+<script>
+	function myFunction(){
+		var Image = document.getElementById("myImg");
+		var myfile = document.getElementById("myImg").src;
+		var ext = myfile.substr(myfile.lastIndexOf('.'));
+		if(ext == ".zip"){
+			Image.style.display = 'none';
+		}
+	}
+	
+	
+	 function hideZip() {
+            var Image = document.getElementById("myImg").getElementsByTagName("img").length;
+            alert("hello");
+            var myfile = document.getElementById("myImg").src;
+            var ext = myfile.substr(myfile.lastIndexOf('.'));
+            if (ext == ".zip") {
+                Image.style.display = 'none';
+            }
+        
+        }
+	
+</script>
+</html>
+
+ case "application/zip":
+  // .pdf
+   attachmentFileIcon = "/Images/iconFile.png";
+   break;
+
+test123

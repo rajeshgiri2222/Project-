@@ -1,0 +1,68 @@
+<html>
+	<head> 
+		<title>Ram And Shyam Age </title> 
+	</head>
+	<body>
+
+	<table width="500" border="0" background="red">
+		<tr>
+			<td> Ram Age </td>
+			<td> <input type="text" id="ram"> </td>
+			<td> <h3> Ram is <span id="test1"> </span> old </h3> </td>
+		</tr>
+
+		<tr>
+			<td>Shyam Age</td>
+			<td> <input type="text" id="shyam"> </td>
+			<td><h3> Shyam is <span id="test2"> </span> old </h3> </td>
+		</tr>
+		
+		<tr>
+			<td> Ajay Age </td>
+			<td> <input type="text" id="ajay"> </td>
+			<td> <h3> Ajay is <span id="test3"> </span> old </h3> </td>
+		</tr>
+		
+		<tr>
+		<td> <h1 id="demo"> </h1></td>
+		<td> <button onclick="youngest()"> Youngest One </button>  </td> 
+		</tr>
+		
+	</table>
+	
+	
+		<script>
+		
+		
+		function youngest(){
+			var ramAge = document.getElementById("ram").value;
+			var shyamAge = document.getElementById("shyam").value;
+			var ajayAge = document.getElementById("ajay").value;
+			//document.getElementById("test1").innerHTML = ramAge;
+			//document.getElementById("test2").innerHTML = shyamAge;
+			//document.getElementById("test3").innerHTML = ajayAge;
+			
+			var age = [ramAge , shyamAge , ajayAge ]
+			
+			if(ramAge < shyamAge && ramAge < ajayAge){
+				document.getElementById("demo").innerHTML = "Ram is youngest one" + ramAge + "Years Old";
+			}
+			
+			else if(shyamAge < ramAge && shyamAge < ajayAge){
+				document.getElementById("demo").innerHTML = "Shyam is youngest one" + shyamAge + "Years Old";
+			}
+			
+			else if(ajayAge < ramAge && ajayAge < shyamAge){
+				document.getElementById("demo").innerHTML = "Ajay is youngest one" + ajayAge + "Years Old";
+			}
+		}
+		
+		
+		
+		
+		
+		
+		</script>
+	
+	</body>
+</html>

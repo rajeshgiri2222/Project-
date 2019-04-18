@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Java Projest</title>
+		
+		<style>
+		.main{
+			width:1000px;
+			height:auto;
+			margin: 0 auto;
+			padding:50px;
+		}
+		
+		.imgdiv{
+			width:400px;
+			margin:50px;
+			float:left;
+		}
+		</style>
+		
+		
+	</head>
+	<body>
+	<div class="main">
+		<img class="imgdiv" src="img1.jpg">
+		<img class="imgdiv" src="img2.jpg">
+		<button onclick="myFunction()">Change Images </div>
+	</div>
+	<script>
+	var imgName = ["img2.jpg", "img1.jpg"];
+	
+	function myFunction(){
+	//var = idName("img" + i);
+	var len = imgName.length;
+		for(var i = 0; i < len; i++){ 
+			document.getElementsByTagName("img")[i].setAttribute("id", "img" + i);
+			document.getElementById("img" + i).src = imgName[i];
+		}
+	}
+	</script>
+	</body>
+</html>
